@@ -1,11 +1,11 @@
 {
-    "reporter": "mochawesome",
-    "reporterOptions": {
-        "reportDir": "cypress/report/mochawesome-report",
-        "overwhite": "true",
-        "html": "true",
-        "json": "false",
-        "timestamp": "mmddyyy_HHMMss"
-    }
-
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/report/mochawesome-report",
+    "overwhite": "true",
+    "html": "true",
+    "json": "false",
+    "timestamp": "mmddyyy_HHMMss"
+  },
+  "projectId": "7v34ow"
 }
