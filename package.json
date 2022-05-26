@@ -1,0 +1,22 @@
+{
+  "name": "alurapic-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fraanpsilva/tests-e2e-cypress.git"
+  },
+  "author": "Francilene Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fraanpsilva/tests-e2e-cypress/issues"
+  },
+  "homepage": "https://github.com/fraanpsilva/tests-e2e-cypress#readme",
+  "devDependencies": {
+    "cypress": "^9.7.0"
+  }
+}
