@@ -1,0 +1,182 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-05-26T22:54:46.667Z",
+    "end": "2022-05-26T22:55:04.688Z",
+    "duration": 18021,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "608d7a31-007b-44b2-a25f-ffd341bc38e6",
+      "title": "",
+      "fullFile": "cypress/integration/3-alurapic-tests/alurapic.spec.js",
+      "file": "cypress/integration/3-alurapic-tests/alurapic.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "32af7971-f82e-452c-988c-cca85efd7509",
+          "title": "Login e registro de usuarios alurapic",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verifica mensagens validacao",
+              "fullTitle": "Login e registro de usuarios alurapic Verifica mensagens validacao",
+              "timedOut": null,
+              "duration": 4406,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// interagindo com link\ncy.contains('a', 'Register now').click();\ncy.contains('button', 'Register').click(); // fazendo um assert\ncy.contains('ap-vmessage', 'Email is required!').should('be.visible');\ncy.contains('button', 'Register').click();\ncy.contains('ap-vmessage', 'Email is required!').should('be.visible');\ncy.contains('ap-vmessage', 'Full name is required!').should('be.visible');\ncy.contains('ap-vmessage', 'User name is required!').should('be.visible');\ncy.contains('ap-vmessage', 'Password is required!').should('be.visible');",
+              "err": {},
+              "uuid": "fc186c4f-0974-49fb-a4cd-7294122a3724",
+              "parentUUID": "32af7971-f82e-452c-988c-cca85efd7509",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verifica mensagem de e-mail inválido",
+              "fullTitle": "Login e registro de usuarios alurapic Verifica mensagem de e-mail inválido",
+              "timedOut": null,
+              "duration": 2439,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('a', 'Register now').click();\ncy.get('input[formcontrolname=\"email\"]').type('Francilene');\ncy.contains('button', 'Register').click();\ncy.contains('ap-vmessage', 'Invalid e-mail').should('be.visible');",
+              "err": {},
+              "uuid": "d12edd58-f5bb-4848-8684-7407e725e13e",
+              "parentUUID": "32af7971-f82e-452c-988c-cca85efd7509",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verifica mensagem de user name \"deve ser com letra minúscula\"",
+              "fullTitle": "Login e registro de usuarios alurapic Verifica mensagem de user name \"deve ser com letra minúscula\"",
+              "timedOut": null,
+              "duration": 2324,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('a', 'Register now').click();\ncy.get('input[formcontrolname=\"email\"]').type('fran@gmail.com');\ncy.get('input[formcontrolname=\"fullName\"]').type('Francilene Silva');\ncy.get('input[formcontrolname=\"userName\"]').type('Fran');\ncy.get('input[formcontrolname=\"password\"]').type('123456789');\ncy.contains('button', 'Register').click();\ncy.contains('ap-vmessage', 'Must be lower case').should('be.visible');",
+              "err": {},
+              "uuid": "75728bec-6c11-4a9f-9d40-4ed0cd252083",
+              "parentUUID": "32af7971-f82e-452c-988c-cca85efd7509",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verifica mensagem de senha com tamanho mínimo de 8 caracteres",
+              "fullTitle": "Login e registro de usuarios alurapic Verifica mensagem de senha com tamanho mínimo de 8 caracteres",
+              "timedOut": null,
+              "duration": 2064,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('a', 'Register now').click();\ncy.get('input[formcontrolname=\"email\"]').type('fran@gmail.com');\ncy.get('input[formcontrolname=\"fullName\"]').type('Francilene Silva');\ncy.get('input[formcontrolname=\"userName\"]').type('fran');\ncy.get('input[formcontrolname=\"password\"]').type('123');\ncy.contains('button', 'Register').click();\ncy.contains('ap-vmessage', 'Mininum length is 8').should('be.visible');",
+              "err": {},
+              "uuid": "8ce69b57-fef2-4ada-a800-f0ca942411ad",
+              "parentUUID": "32af7971-f82e-452c-988c-cca85efd7509",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verifica mensagem de senha com tamanho maximo de 18 caracteres",
+              "fullTitle": "Login e registro de usuarios alurapic Verifica mensagem de senha com tamanho maximo de 18 caracteres",
+              "timedOut": null,
+              "duration": 2182,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('a', 'Register now').click();\ncy.get('input[formcontrolname=\"email\"]').type('fran@gmail.com');\ncy.get('input[formcontrolname=\"fullName\"]').type('Francilene Silva');\ncy.get('input[formcontrolname=\"userName\"]').type('fran');\ncy.get('input[formcontrolname=\"password\"]').type('12345678901234567891');\ncy.contains('button', 'Register').click();\ncy.contains('ap-vmessage', 'Maximun length is 18').should('be.visible');",
+              "err": {},
+              "uuid": "4288f21e-8cff-48db-b59e-57e4c2a78648",
+              "parentUUID": "32af7971-f82e-452c-988c-cca85efd7509",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fc186c4f-0974-49fb-a4cd-7294122a3724",
+            "d12edd58-f5bb-4848-8684-7407e725e13e",
+            "75728bec-6c11-4a9f-9d40-4ed0cd252083",
+            "8ce69b57-fef2-4ada-a800-f0ca942411ad",
+            "4288f21e-8cff-48db-b59e-57e4c2a78648"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13415,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwhite": "true",
+        "html": "true",
+        "json": "true",
+        "timestamp": "mmddyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

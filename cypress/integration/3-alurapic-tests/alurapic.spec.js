@@ -8,11 +8,9 @@ describe('Login e registro de usuarios alurapic', () => {
         // interagindo com link
         cy.contains('a', 'Register now').click();
         cy.contains('button', 'Register').click();
-
         // fazendo um assert
         cy.contains('ap-vmessage', 'Email is required!')
             .should('be.visible');
-
         cy.contains('button', 'Register').click();
         cy.contains('ap-vmessage', 'Email is required!')
             .should('be.visible');
@@ -60,6 +58,4 @@ describe('Login e registro de usuarios alurapic', () => {
         cy.contains('button', 'Register').click();
         cy.contains('ap-vmessage', 'Maximun length is 18').should('be.visible');
     })
-
-
 });
