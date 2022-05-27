@@ -27,3 +27,7 @@ recurso que conseguimos centralizar a execução dos testes e gerar dados analit
 
 * é necessário criar uma conta no cypress
 * vincular o projeto a essa conta
+* para saber mais sobre [Mocha](https://mochajs.org/)
+
+### comandos personalizados
+Ao criar comandos personalizados, tem que fazer o import deste arquivo, na index.html na pasta suport

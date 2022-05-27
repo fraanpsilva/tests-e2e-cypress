@@ -58,4 +58,18 @@ describe('Login e registro de usuarios alurapic', () => {
         cy.contains('button', 'Register').click();
         cy.contains('ap-vmessage', 'Maximun length is 18').should('be.visible');
     })
+
+    it.only('Fazer login com usuário valido', ()=>{
+        cy.login('flavio', '123');
+        cy.contains('a', '(Logout)').should('be.visible');
+    })
+
+    // it.only informa pra rodar apenas os testes que possui
+    it.only('Fazer login com usuário invalido', ()=>{
+        cy.login('francilene', '1234');
+        cy.on('window:alert', (str) =>{
+            expect(str).to.equal('Invalid user name or password')
+        })
+        
+    })
 });
