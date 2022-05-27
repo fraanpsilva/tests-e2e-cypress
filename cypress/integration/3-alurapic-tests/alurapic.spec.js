@@ -31,41 +31,29 @@ describe('Login e registro de usuarios alurapic', () => {
 
     it('Verifica mensagem de user name "deve ser com letra minúscula"', () =>{
         cy.contains('a', 'Register now').click(); 
-        cy.get('input[formcontrolname="email"]').type('fran@gmail.com');
-        cy.get('input[formcontrolname="fullName"]').type('Francilene Silva');
-        cy.get('input[formcontrolname="userName"]').type('Fran');
-        cy.get('input[formcontrolname="password"]').type('123456789');
-        cy.contains('button', 'Register').click();
+        cy.preencheFormulario('fran@gmail.com', 'Francilene Silva', 'Fran', '12345678');
         cy.contains('ap-vmessage', 'Must be lower case').should('be.visible');
     })
 
     it('Verifica mensagem de senha com tamanho mínimo de 8 caracteres', () =>{
         cy.contains('a', 'Register now').click(); 
-        cy.get('input[formcontrolname="email"]').type('fran@gmail.com');
-        cy.get('input[formcontrolname="fullName"]').type('Francilene Silva');
-        cy.get('input[formcontrolname="userName"]').type('fran');
-        cy.get('input[formcontrolname="password"]').type('123');
-        cy.contains('button', 'Register').click();
+        cy.preencheFormulario('fran@gmail.com', 'Francilene Silva', 'Fran', '123');
         cy.contains('ap-vmessage', 'Mininum length is 8').should('be.visible');
     })
 
     it('Verifica mensagem de senha com tamanho maximo de 18 caracteres', () =>{
         cy.contains('a', 'Register now').click(); 
-        cy.get('input[formcontrolname="email"]').type('fran@gmail.com');
-        cy.get('input[formcontrolname="fullName"]').type('Francilene Silva');
-        cy.get('input[formcontrolname="userName"]').type('fran');
-        cy.get('input[formcontrolname="password"]').type('12345678901234567891');
-        cy.contains('button', 'Register').click();
+        cy.preencheFormulario('fran@gmail.com', 'Francilene Silva', 'Fran', '12345678901234567891');
         cy.contains('ap-vmessage', 'Maximun length is 18').should('be.visible');
     })
 
-    it.only('Fazer login com usuário valido', ()=>{
+    it('Fazer login com usuário valido', ()=>{
         cy.login('flavio', '123');
         cy.contains('a', '(Logout)').should('be.visible');
     })
 
     // it.only informa pra rodar apenas os testes que possui
-    it.only('Fazer login com usuário invalido', ()=>{
+    it('Fazer login com usuário invalido', ()=>{
         cy.login('francilene', '1234');
         cy.on('window:alert', (str) =>{
             expect(str).to.equal('Invalid user name or password')
