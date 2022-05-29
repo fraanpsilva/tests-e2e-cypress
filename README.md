@@ -31,3 +31,10 @@ recurso que conseguimos centralizar a execução dos testes e gerar dados analit
 
 ### comandos personalizados
 Ao criar comandos personalizados, tem que fazer o import deste arquivo, na index.html na pasta suport
+
+### Manipular dados sensíveis
+* Criar variáveis de ambiente para guardar os dados como senha, informações de cartão de crédito e outros num arquivo separado como o cypress.env.json.
+* Armazenar arquivos de dados sensíveis no .gitignore, para não integrar essas variáveis com ferramentas de integração contínua
+* Incluir parâmetro { logs: false } na função que faz a digitação da senha, para não demonstrar na interface gráfica do Cypress o valor digitado.
+
+### organizando os testes

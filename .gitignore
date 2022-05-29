@@ -1,2 +1,2 @@
 # arquivos com dados sensíveis ficam no .gitignore
-cypress.env.json
+cypress.env.json 
