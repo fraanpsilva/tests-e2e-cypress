@@ -72,6 +72,8 @@ describe('Login e registro de usuarios alurapic', () => {
             cy.contains('button', 'Register').click();
         })
 
+        
+
     })
     
 });
