@@ -54,3 +54,7 @@ Algumas dicas que podem ser úteis para evitar os flaky tests:
 5. Caso seja algum teste que faz uma chamada a alguma API externa ou de terceiros, considere usar um mock para ter um controle melhor sobre a resposta que será devolvida.
 
 Flaky tests não devem estar na suite de testes. Se não for possível corrigi-lo, considere remover o teste ou pensar em outra alternativa para verificar esse resultado.
+
+
+### Boas práticas
+* Criar uma base url no cypress.json
